@@ -2,6 +2,7 @@ import asyncio
 import logging
 
 from aiogram.client.default import DefaultBotProperties
+from aiogram.client.session.aiohttp import AiohttpSession
 from colorama import Fore, init
 
 from aiogram import Bot, Dispatcher
@@ -24,8 +25,9 @@ async def main():
     storage = MemoryStorage()
 
     # proxy_url = "http://proxy.server:3128" - прокси для pythonanywhere
+    session = AiohttpSession(proxy="http://proxy.server:3128")
     default_properties = DefaultBotProperties(parse_mode='html', link_preview_is_disabled=True)
-    bot = Bot(token="7969398426:AAGPnBf_wn3Bw39seIn2Xhl3EzgE6ojxNi0", default=default_properties)
+    bot = Bot(token="7969398426:AAGPnBf_wn3Bw39seIn2Xhl3EzgE6ojxNi0", default=default_properties, session=session)
     dp = Dispatcher(storage=storage)
 
     dp.include_router(admin_router)
