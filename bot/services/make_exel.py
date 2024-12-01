@@ -7,4 +7,4 @@ def make_excel(aid: int):
         data = load(file)
 
     df = pd.DataFrame(data)
-    df.to_excel("songs.xlsx", index=False, header=["Отправитель", "Имя песни", "Автор"])
+    df.to_excel("songs.xlsx", index=False, header=["Отправитель", "Название песни", "Автор"])
