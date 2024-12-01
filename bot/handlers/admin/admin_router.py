@@ -5,7 +5,7 @@ from aiogram.types import Message, FSInputFile
 from services.make_exel import make_excel
 
 admin_router = Router(name='admin_router')
-ADMIN_IDS = [1889892706, 7292402850]
+ADMIN_IDS = [1889892706, 7292402850, 5403969987]
 
 
 @admin_router.message(Command('excel'))
