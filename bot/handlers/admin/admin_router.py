@@ -2,10 +2,10 @@ from aiogram import Router, F
 from aiogram.filters import Command, CommandObject
 from aiogram.types import Message, FSInputFile
 
-from bot.services.make_exel import make_excel
+from services.make_exel import make_excel
 
 admin_router = Router(name='admin_router')
-ADMIN_IDS = [1889892706]
+ADMIN_IDS = [1889892706, 7292402850]
 
 
 @admin_router.message(Command('excel'))
